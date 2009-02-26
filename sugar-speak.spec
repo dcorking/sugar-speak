@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        9
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -51,6 +51,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 9-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
 * Sun Dec 14 2008 Fabian Affolter <fabian@bernewireless.net> - 9-3
 - Fixed add numpy and espeak to Requires
 
