@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        9
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -51,6 +51,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 9-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
+
 * Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 9-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
 
