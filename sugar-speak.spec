@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        14
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -12,6 +12,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{_id_u} -n)
 BuildArch:      noarch
 
 BuildRequires:  python
+BuildRequires:  gettext
 BuildRequires:  sugar-toolkit
 
 Requires:       sugar
@@ -55,6 +56,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-2
+- Add gettext dependency
+
 * Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-1
 - New upstream release
 
