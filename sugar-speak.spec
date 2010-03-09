@@ -1,13 +1,13 @@
 Name:           sugar-speak
-Version:        9
-Release:        5%{?dist}
+Version:        14
+Release:        1%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
-License:        GPLv3+
+License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
-Source0:        Speak-%{version}.tar.bz2
-Source1:        sugar-speak-checkout.sh
+Source0:        http://activities.sugarlabs.org/sugar/downloads/file/26826/speak-%{version}.xo
+Patch0:         sugar-speak-no-aiml.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{_id_u} -n)
 BuildArch:      noarch
 
@@ -27,7 +27,11 @@ is a great way to experiment with the speech synthesizer, learn to type or
 just have fun making a funny face for your XO.  
 
 %prep
-%setup -q -n Speak-%{version}/Speak.activity
+%setup -q -n Speak.activity
+%patch0 -p1
+
+# remove stuff we don't want
+rm -rf .0sugar bot
 
 
 %build
@@ -51,6 +55,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-1
+- New upstream release
+
 * Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 9-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
 

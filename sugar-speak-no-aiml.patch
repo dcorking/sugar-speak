@@ -1,0 +1,28 @@
+diff -ur a/brain.py b/brain.py
+--- a/brain.py	2010-03-09 18:08:30.000000000 +0100
++++ b/brain.py	2010-03-09 18:08:54.000000000 +0100
+@@ -26,23 +26,9 @@
+ 
+ from toolkit.combobox import ComboBox
+ 
+-import bot.aiml
+ import voice
+ 
+-BOTS = {
+-    _('Spanish'): { 'name': 'Sara',
+-                    'brain': 'bot/sara.brn',
+-                    'predicates': { 'nombre_bot': 'Sara',
+-                                    'botmaster': 'la comunidad Azucar' } },
+-    _('English'): { 'name': 'Alice',
+-                    'brain': 'bot/alice.brn',
+-                    'predicates': { 'name': 'Alice',
+-                                    'master': 'the Sugar Community' } } }
+-
+-# load Standard AIML set for restricted systems
+-if int([i for i in file('/proc/meminfo').readlines()
+-        if i.startswith('MemTotal:')][0].split()[1]) < 524288:
+-    BOTS[_('English')]['brain'] = 'bot/alisochka.brn'
++BOTS = {}
+ 
+ _kernel = None
+ _kernel_voice = None
