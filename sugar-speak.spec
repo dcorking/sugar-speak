@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        14
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -44,18 +44,23 @@ rm -rf  %{buildroot}
 ./setup.py install --prefix=%{buildroot}/%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
 
+%find_lang vu.lux.olpc.Speak
+
 
 %clean
 rm -rf  %{buildroot}
 
 
-%files
+%files -f vu.lux.olpc.Speak.lang
 %defattr(-,root,root,-)
 %doc NEWS COPYING
 %{sugaractivitydir}/Speak.activity/
 
 
 %changelog
+* Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-3
+- Grab locales properly
+
 * Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-2
 - Add gettext dependency
 
