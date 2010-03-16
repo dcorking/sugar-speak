@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        14
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -27,23 +27,22 @@ rate and pitch of the voice as well as the shape of the eyes and mouth. This
 is a great way to experiment with the speech synthesizer, learn to type or 
 just have fun making a funny face for your XO.  
 
+
 %prep
 %setup -q -n Speak.activity
 %patch0 -p1
-
 # remove stuff we don't want
 rm -rf .0sugar bot
 
 
 %build
-python ./setup.py build
+%{__python} setup.py build
 
 
 %install
 rm -rf  %{buildroot}
-./setup.py install --prefix=%{buildroot}/%{_prefix}
+%{__python} install --prefix=%{buildroot}/%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
-
 %find_lang vu.lux.olpc.Speak
 
 
@@ -58,6 +57,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Mon Mar 15 2010 Fabian Affolter <fabian@bernewireless.net> - 14-4
+- Minor layout changes
+
 * Tue Mar 09 2010 Sebastian Dziallas <sebastian@when.com> - 14-3
 - Grab locales properly
 
