@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        14
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -57,6 +57,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Wed Aug 11 2010 David Malcolm <dmalcolm@redhat.com> - 14-5
+- recompiling .py files against Python 2.7 (rhbz#623386)
+
 * Mon Mar 15 2010 Fabian Affolter <fabian@bernewireless.net> - 14-4
 - Minor layout changes
 
