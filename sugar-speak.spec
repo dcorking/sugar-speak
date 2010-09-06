@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        14
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -41,7 +41,7 @@ rm -rf .0sugar bot
 
 %install
 rm -rf  %{buildroot}
-%{__python} install --prefix=%{buildroot}/%{_prefix}
+%{__python} install --prefix=%{buildroot}%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
 %find_lang vu.lux.olpc.Speak
 
@@ -57,6 +57,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Mon Sep 06 2010 Fabian Affolter <fabian@bernewireless.net> - 14-6
+- Fix install section to resolve #623386
+
 * Wed Aug 11 2010 David Malcolm <dmalcolm@redhat.com> - 14-5
 - recompiling .py files against Python 2.7 (rhbz#623386)
 
