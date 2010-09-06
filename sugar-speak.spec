@@ -8,7 +8,7 @@ License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
 Source0:        http://activities.sugarlabs.org/sugar/downloads/file/26826/speak-%{version}.xo
 Patch0:         sugar-speak-no-aiml.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{_id_u} -n)
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
 BuildRequires:  python
