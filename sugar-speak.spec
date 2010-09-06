@@ -41,7 +41,7 @@ rm -rf .0sugar bot
 
 %install
 rm -rf  %{buildroot}
-%{__python} install --prefix=%{buildroot}%{_prefix}
+%{__python} setup.py install --prefix=%{buildroot}%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
 %find_lang vu.lux.olpc.Speak
 
