@@ -6,9 +6,7 @@ Summary:        Speak for Sugar
 Group:          Sugar/Activities
 License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
-Source0:        http://activities.sugarlabs.org/sugar/downloads/file/26826/speak-%{version}.xo
-Patch0:         sugar-speak-no-aiml.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{_id_u} -n)
+Source0:        http://download.sugarlabs.org/sources/honey/Speak/Speak-%{version}.tar.bz2
 BuildArch:      noarch
 
 BuildRequires:  python
@@ -29,9 +27,7 @@ just have fun making a funny face for your XO.
 
 
 %prep
-%setup -q -n Speak.activity
-%patch0 -p1
-# remove stuff we don't want
+%setup -q -n Speak-%{version}
 rm -rf .0sugar bot
 
 
@@ -57,6 +53,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Sat Jan 29 2011 Peter Robinson <pbrobinson@gmail.com> - 20-1
+- New 20 release
+
 * Wed Aug 11 2010 David Malcolm <dmalcolm@redhat.com> - 14-5
 - recompiling .py files against Python 2.7 (rhbz#623386)
 
