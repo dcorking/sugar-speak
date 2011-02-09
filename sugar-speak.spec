@@ -1,6 +1,6 @@
 Name:           sugar-speak
 Version:        20
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -53,6 +53,9 @@ rm -rf  %{buildroot}
 
 
 %changelog
+* Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Sat Jan 29 2011 Peter Robinson <pbrobinson@gmail.com> - 20-1
 - New 20 release
 
