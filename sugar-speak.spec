@@ -1,22 +1,20 @@
 Name:           sugar-speak
-Version:        20
-Release:        2%{?dist}
+Version:        25
+Release:        1%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
 License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
-Source0:        http://download.sugarlabs.org/sources/honey/Speak/Speak-%{version}.tar.bz2
+Source0:        http://download.sugarlabs.org/activities/4038/speak-%{version}.xo
 BuildArch:      noarch
 
 BuildRequires:  python
 BuildRequires:  gettext
 BuildRequires:  sugar-toolkit
-
 Requires:       sugar
 Requires:       numpy
 Requires:       espeak
-
 
 %description
 Speak is a talking face for the XO laptop. Anything you type will be spoken
@@ -25,34 +23,27 @@ rate and pitch of the voice as well as the shape of the eyes and mouth. This
 is a great way to experiment with the speech synthesizer, learn to type or 
 just have fun making a funny face for your XO.  
 
-
 %prep
-%setup -q -n Speak-%{version}
+%setup -q -n Speak.activity
 rm -rf .0sugar bot
-
 
 %build
 %{__python} setup.py build
 
-
 %install
-rm -rf  %{buildroot}
 %{__python} setup.py install --prefix=%{buildroot}%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
 %find_lang vu.lux.olpc.Speak
-
-
-%clean
-rm -rf  %{buildroot}
-
 
 %files -f vu.lux.olpc.Speak.lang
 %defattr(-,root,root,-)
 %doc NEWS COPYING
 %{sugaractivitydir}/Speak.activity/
 
-
 %changelog
+* Sat May  7 2011 Peter Robinson <pbrobinson@gmail.com> - 25-1
+- New 25 release
+
 * Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
 
