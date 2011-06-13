@@ -2,7 +2,7 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        25
+Version:        26
 Release:        1%{?dist}
 Summary:        Speak for Sugar
 
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Mon Jun 13 2011 Peter Robinson <pbrobinson@gmail.com> - 26-1
+- New 26 release
+
 * Sat May  7 2011 Peter Robinson <pbrobinson@gmail.com> - 25-1
 - New 25 release
 
