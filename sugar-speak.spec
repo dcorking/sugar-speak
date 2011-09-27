@@ -2,7 +2,7 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        29
+Version:        32
 Release:        1%{?dist}
 Summary:        Speak for Sugar
 
@@ -44,25 +44,28 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
-* Wed Jul 20 2011 Peter Robinson <pbrobinson@gmail.com> - 29-1
+* Tue Sep 27 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 32-1
+- New 32 release
+
+* Wed Jul 20 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 29-1
 - New 29 release
 
-* Wed Jul 13 2011 Peter Robinson <pbrobinson@gmail.com> - 28-1
+* Wed Jul 13 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 28-1
 - New 28 release
 
-* Sat Jun 18 2011 Peter Robinson <pbrobinson@gmail.com> - 27-1
+* Sat Jun 18 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 27-1
 - New 27 release
 
-* Mon Jun 13 2011 Peter Robinson <pbrobinson@gmail.com> - 26-1
+* Mon Jun 13 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 26-1
 - New 26 release
 
-* Sat May  7 2011 Peter Robinson <pbrobinson@gmail.com> - 25-1
+* Sat May  7 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 25-1
 - New 25 release
 
 * Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
 
-* Sat Jan 29 2011 Peter Robinson <pbrobinson@gmail.com> - 20-1
+* Sat Jan 29 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 20-1
 - New 20 release
 
 * Mon Sep 06 2010 Fabian Affolter <fabian@bernewireless.net> - 14-6
