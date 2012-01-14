@@ -3,7 +3,7 @@
 
 Name:           sugar-speak
 Version:        35
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Sat Jan 14 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 35-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Sat Dec 10 2011 Peter Robinson <pbrobinson@fedoraproject.org> - 35-1
 - New 35 release
 
