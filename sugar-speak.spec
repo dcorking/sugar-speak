@@ -2,7 +2,7 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        39
+Version:        40
 Release:        1%{?dist}
 Summary:        Speak for Sugar
 
@@ -31,10 +31,10 @@ just have fun making a funny face for your XO.
 rm -rf .0sugar bot
 
 %build
-%{__python} setup.py build
+python ./setup.py build
 
 %install
-%{__python} setup.py install --prefix=%{buildroot}%{_prefix}
+python ./setup.py install --prefix=%{buildroot}%{_prefix}
 find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \* -exec chmod 644 {} \;
 %find_lang vu.lux.olpc.Speak
 
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Tue Jun  5 2012 Peter Robinson <pbrobinson@fedoraproject.org> - 40-1
+- New 40 release
+
 * Sat May 26 2012 Peter Robinson <pbrobinson@fedoraproject.org> - 39-1
 - New 39 release
 
