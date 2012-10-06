@@ -2,8 +2,8 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        41
-Release:        2%{?dist}
+Version:        42
+Release:        1%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Sat Oct  6 2012 Peter Robinson <pbrobinson@fedoraproject.org> 42-1
+- New 42 release
+
 * Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 41-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
