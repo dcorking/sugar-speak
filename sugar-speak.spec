@@ -2,14 +2,14 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        42
+Version:        43
 Release:        1%{?dist}
 Summary:        Speak for Sugar
 
 Group:          Sugar/Activities
 License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
-Source0:        http://download.sugarlabs.org/activities/4038/speak-%{version}.xo
+Source0:        http://download.sugarlabs.org/activities/4038/Speak-%{version}.xo
 BuildArch:      noarch
 
 BuildRequires:  python
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Sun Nov  4 2012 Peter Robinson <pbrobinson@fedoraproject.org> 43-1
+- New 43 release
+
 * Sat Oct  6 2012 Peter Robinson <pbrobinson@fedoraproject.org> 42-1
 - New 42 release
 
