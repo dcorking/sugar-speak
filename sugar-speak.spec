@@ -2,7 +2,7 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           sugar-speak
-Version:        43
+Version:        44
 Release:        1%{?dist}
 Summary:        Speak for Sugar
 
@@ -44,6 +44,9 @@ find  %{buildroot}%{sugaractivitydir}Speak.activity/activity.py  -type f -name \
 %{sugaractivitydir}/Speak.activity/
 
 %changelog
+* Thu Nov  8 2012 Peter Robinson <pbrobinson@fedoraproject.org> 44-1
+- New 44 release
+
 * Sun Nov  4 2012 Peter Robinson <pbrobinson@fedoraproject.org> 43-1
 - New 43 release
 
