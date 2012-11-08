@@ -9,7 +9,7 @@ Summary:        Speak for Sugar
 Group:          Sugar/Activities
 License:        GPLv2+ and GPLv3+
 URL:            http://wiki.laptop.org/go/Speak
-Source0:        http://download.sugarlabs.org/activities/4038/Speak-%{version}.xo
+Source0:        http://download.sugarlabs.org/sources/honey/Speak/Speak-%{version}.tar.bz2
 BuildArch:      noarch
 
 BuildRequires:  python
@@ -27,7 +27,7 @@ is a great way to experiment with the speech synthesizer, learn to type or
 just have fun making a funny face for your XO.  
 
 %prep
-%setup -q -n Speak.activity
+%setup -q -n Speak-%{version}
 rm -rf .0sugar bot
 
 %build
